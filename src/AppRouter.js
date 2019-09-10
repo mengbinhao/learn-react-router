@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Index from './Pages/Index'
 import About from './Pages/About'
+import Home from './Pages/Home'
 
 function AppRouter() {
   return (
@@ -15,7 +16,8 @@ function AppRouter() {
         </li>
       </ul>
       <Route path="/" exact component={Index}></Route>
-      <Route path="/about/:id" exact component={About}></Route>
+      <Route path="/about/:id" component={About}></Route>
+      <Route path="/home/" component={Home}></Route>
     </Router>
   )
 }

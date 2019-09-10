@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 class Index extends Component {
   constructor(props) {
@@ -11,10 +11,12 @@ class Index extends Component {
         { uid: 333, text: 'cccc' }
       ]
     }
+    this.props.history.push('/home/')
   }
   render() {
     return (
       <div>
+        {/* <Redirect to="/home/" /> */}
         <h2>Index page</h2>
         <ul>
           {this.state.items.map((item, index) => {
