@@ -17,11 +17,11 @@ function AppRouter() {
           <Link to="/">index</Link>
         </li>
         <li>
-          <Link to="/about">about</Link>
+          <Link to="/about/">about</Link>
         </li>
       </ul>
       <Route path="/" exact component={Index}></Route>
-      <Route path="/about" exact component={About}></Route>
+      <Route path="/about/" exact component={About}></Route>
     </Router>
   )
 }
