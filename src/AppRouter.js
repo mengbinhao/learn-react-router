@@ -1,13 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
-function Index() {
-  return <h2>Index page</h2>
-}
-
-function About() {
-  return <h2>about page</h2>
-}
+import Index from './Pages/Index'
+import About from './Pages/About'
 
 function AppRouter() {
   return (
@@ -21,7 +15,7 @@ function AppRouter() {
         </li>
       </ul>
       <Route path="/" exact component={Index}></Route>
-      <Route path="/about/" exact component={About}></Route>
+      <Route path="/about/:id" exact component={About}></Route>
     </Router>
   )
 }
